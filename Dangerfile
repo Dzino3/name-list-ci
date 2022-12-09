@@ -6,7 +6,7 @@ trivial_threshold = 10
 is_short_description = (pr_body_text.length < github.pr_title.length) && (pr_body_text.length <= trivial_threshold)
 is_trivial_code_change = git.lines_of_code <= trivial_threshold
 
-if (is_short_description || is_template_text) && !is_trivial_code_change
+if is_short_description && !is_trivial_code_change
   warn "`404` Pull Request description not found :disappointed: \nWrite a convincing description of your PR and why we should land it"
 end
 
