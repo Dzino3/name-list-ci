@@ -31,6 +31,6 @@ jobs:
           INPUT_JSONS: nameList.json
 
       - name: Run Danger
-        uses: actionshub/danger-rb@main
+        uses: actionshub/danger-rb@v2.0.6
         env:
            DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
