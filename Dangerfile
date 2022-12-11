@@ -12,7 +12,7 @@ end
 
 # Validate commit message
 contribution_file = '.github/CONTRIBUTING.md'
-commit_regex = '([A-Z])\w+(.*)' # Start with an uppercase letter
+commit_regex = '(.*(#|gh-)[1-9][0-9]*.*)'
 git.commits.each do |commit|
   commit_message = commit.message.lines.first.chomp.strip.gsub(/\s+/, ' ')
   warn "Commit message `#{commit_message}` does not follow the [Contribtuion Rules](#{contribution_file})!" if commit_message !~ /#{commit_regex}/
