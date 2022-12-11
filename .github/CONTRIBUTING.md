@@ -8,4 +8,4 @@ These are the steps to follow to contribute code into the repository.
 * Write a convincing description of your PR and why we should land it.
 
 ## Commit Message
-The project requires that commit messages start with an uppercase letter and have at least two words.
+The project requires that commit messages always contain a GitHub issue (`#1` or `gh-1`).
